@@ -1,2 +1,2 @@
 # sms
-Hauʻoli Koʻo: A service management and social network system created for beauty industry professionals
+Hauʻoli Koʻo (Happy Helper): A service management and schedule system created for beauty industry professionals
