@@ -1,6 +1,6 @@
 using System;
 
-namespace MvcMovie.Models
+namespace HappyHelper.Models
 {
     public class ErrorViewModel
     {

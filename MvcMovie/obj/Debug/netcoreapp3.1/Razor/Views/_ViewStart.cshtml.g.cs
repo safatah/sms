@@ -14,20 +14,20 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
 #nullable restore
 #line 1 "C:\CODING\LIFTOFF\SMS\sms\MvcMovie\Views\_ViewImports.cshtml"
-using MvcMovie;
+using HappyHelper;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 2 "C:\CODING\LIFTOFF\SMS\sms\MvcMovie\Views\_ViewImports.cshtml"
-using MvcMovie.Models;
+using HappyHelper.Models;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"686ad2e38abb871af45be971520cc6c3156da389", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"596966547179b2554b450f54b22bfb9393bbb61e", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

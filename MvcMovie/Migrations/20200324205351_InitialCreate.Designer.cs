@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using MvcMovie.Data;
+using HappyHelper.Data;
 
-namespace MvcMovie.Migrations
+namespace HappyHelper.Migrations
 {
-    [DbContext(typeof(MvcMovieContext))]
+    [DbContext(typeof(HappyHelperContext))]
     [Migration("20200324205351_InitialCreate")]
     partial class InitialCreate
     {
@@ -21,7 +21,7 @@ namespace MvcMovie.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("MvcMovie.Models.Movie", b =>
+            modelBuilder.Entity("HappyHelper.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

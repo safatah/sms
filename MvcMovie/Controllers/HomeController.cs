@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MvcMovie.Models;
+using HappyHelper.Models;
 
-namespace MvcMovie.Controllers
+namespace HappyHelper.Controllers
 {
     public class HomeController : Controller
     {
@@ -24,6 +24,14 @@ namespace MvcMovie.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+        public IActionResult SignUp()
+        {
+            return View();
+        }
+        public IActionResult Login()
         {
             return View();
         }

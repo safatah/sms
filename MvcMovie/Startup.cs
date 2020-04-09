@@ -8,10 +8,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MvcMovie.Data;
+using HappyHelper.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace MvcMovie
+namespace HappyHelper
 {
     public class Startup
     {
@@ -27,8 +27,8 @@ namespace MvcMovie
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<MvcMovieContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("MvcMovieContext")));
+            services.AddDbContext<HappyHelperContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("HappyHelperContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
