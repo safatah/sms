@@ -21,20 +21,20 @@ namespace HappyHelper.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("HappyHelper.Models.Movie", b =>
+            modelBuilder.Entity("HappyHelper.Models.InventoryTracker", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Genre")
+                    b.Property<string>("InStock")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime>("ReleaseDate")
+                    b.Property<DateTime>("RestockDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
@@ -42,7 +42,7 @@ namespace HappyHelper.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movie");
+                    b.ToTable("InventoryTracker");
                 });
 #pragma warning restore 612, 618
         }

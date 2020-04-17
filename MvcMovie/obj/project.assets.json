@@ -8497,9 +8497,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CODING\\LIFTOFF\\SMS\\sms\\MvcMovie\\MvcMovie.csproj",
-      "projectName": "MvcMovie",
-      "projectPath": "C:\\CODING\\LIFTOFF\\SMS\\sms\\MvcMovie\\MvcMovie.csproj",
+      "projectUniqueName": "C:\\CODING\\LIFTOFF\\SMS\\sms\\MvcMovie\\HappyHelper.csproj",
+      "projectName": "HappyHelper",
+      "projectPath": "C:\\CODING\\LIFTOFF\\SMS\\sms\\MvcMovie\\HappyHelper.csproj",
       "packagesPath": "C:\\Users\\stkyt\\.nuget\\packages\\",
       "outputPath": "C:\\CODING\\LIFTOFF\\SMS\\sms\\MvcMovie\\obj\\",
       "projectStyle": "PackageReference",

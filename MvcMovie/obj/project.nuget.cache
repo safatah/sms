@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6N+FQ0b178RAE32qaYjAw+6PmbGQCHom/EPodTrL1ERQfCJ4F0RvZcKb6TACIUjRpoIJv7MGPXyjLO+MRAaMgg==",
+  "dgSpecHash": "JV5nrYdJ0I15HHB4+1hhdY3LANo9lG5VLJpQQhv9i9MwdmRA+9R/DemUbCQ71/lO4XfO/d5Lf2TjktROC9fkqQ==",
   "success": true,
-  "projectFilePath": "C:\\CODING\\LIFTOFF\\SMS\\sms\\MvcMovie\\MvcMovie.csproj",
+  "projectFilePath": "C:\\CODING\\LIFTOFF\\SMS\\sms\\MvcMovie\\HappyHelper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\stkyt\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\stkyt\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

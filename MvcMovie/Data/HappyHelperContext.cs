@@ -11,5 +11,8 @@ namespace HappyHelper.Data
         }
 
         public DbSet<SignUp> SignUp { get; set; }
+        public DbSet<UserInfo> UserInfo { get; set; }
+        public DbSet<BusinessInfo> BusinessInfo { get; set; }
+        public DbSet<InventoryTracker> InventoryTracker { get; set; }
     }
 }

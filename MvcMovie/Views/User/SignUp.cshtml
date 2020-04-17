@@ -1,0 +1,55 @@
+﻿@model HappyHelper.Models.SignUp
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<h1>Create your Hauʻoli Koʻo Profile</h1>
+    Please enter your information
+<form asp-action="Create">
+    <div style="display: inline-block;">
+        Name<br />
+        <label asp-for="FirstName" class="control-label">First name:</label><br />
+        <input asp-for="FirstName" class="form-control" placeholder="Israel"><br />
+        <label asp-for="LastName" class="control-label">Last name:</label><br />
+        <input asp-for="LastName" class="form-control" placeholder="Kamakawiwo'ole"><br />
+        <label asp-for="Nickname" class="control-label">Preferred name/nickname:</label><br />
+        <input asp-for="Nickname" class="form-control" placeholder="Braddah Iz">
+    </div>
+    <div style="display: inline-block;">
+        Contact Information<br />
+        <label asp-for="ContactNumber" class="control-label">Phone number:</label><br />
+        <input asp-for="ContactNumber" class="form-control" placeholder="123-456-7891"><br />
+        <label asp-for="ContactEmail" class="control-label">Email:</label><br />
+        <input asp-for="ContactEmail" class="form-control" placeholder="braddahizaloha@gmail.com"><br />
+        <label asp-for="SocialMedia" class="control-label">Social media:</label><br />
+        <input asp-for="SocialMedia" class="form-control" placeholder="instagram.com/braddahisraelk">
+    </div>
+    <div style="display: inline-block;">
+        Business Information<br />
+        <label asp-for="BusinessInfo.BusinessName" class="control-label">Business/store name:</label><br />
+        <input asp-for="BusinessInfo.BusinessName" class="form-control" placeholder="Hawaiian Supahcutz"><br />
+        <label asp-for="BusinessInfo.BusinessNumber" class="control-label">Business/store phone number:</label><br />
+        <input asp-for="BusinessInfo.BusinessNumber" class="form-control" placeholder="123-456-7891"><br />
+        <label asp-for="BusinessInfo.Address1" class="control-label">Address:</label><br />
+        <input asp-for="BusinessInfo.Address1" class="form-control" placeholder="123 Lunalilo Fwy "><br />
+        <label asp-for="BusinessInfo.Address2" class="control-label">Address (line 2):</label><br />
+        <input asp-for="BusinessInfo.Address2" class="form-control" placeholder="Ste #3"><br />
+        <label asp-for="BusinessInfo.City" class="control-label">City:</label><br />
+        <input asp-for="BusinessInfo.City" class="form-control" placeholder="Kaimuki"><br />
+        <label asp-for="BusinessInfo.State" class="control-label">State:</label><br />
+        <input asp-for="BusinessInfo.State" class="form-control" placeholder="HI" pattern="[A-Z]{2}"><br />
+        <label asp-for="BusinessInfo.ZipCode" class="control-label">Zip Code:</label><br />
+        <input asp-for="BusinessInfo.ZipCode" class="form-control" placeholder="96814" pattern="[0-9]{5}"><br />
+    </div>
+    <div style="display: inline-block;">
+        Username & Password<br />
+        <label asp-for="Username" class="control-label">Email address:</label><br />
+        <input asp-for="Username" class="form-control" placeholder="braddahizaloha@gmail.com"><br />
+        <label asp-for="Password" class="control-label">Password:</label><br />
+        <input asp-for="Password" class="form-control" placeholder="H@waii78"><br />
+        <label asp-for="Password" class="control-label">Confirm password:</label><br />
+        <input asp-for="Password" class="form-control" placeholder="H@waii78"><br />
+    </div>
+    <br /><br>
+    <input type="submit" value="Create">
+</form>

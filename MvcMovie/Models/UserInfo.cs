@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MvcMovie.Models
+namespace HappyHelper.Models
 {
     public class UserInfo
     {
@@ -11,7 +11,7 @@ namespace MvcMovie.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Nickname { get; set; }
-        public int ContactNumber { get; set; }
+        public string ContactNumber { get; set; }
         public string ContactEmail { get; set; }
         public string SocialMedia { get; set; }
         public BusinessInfo BusinessInfo { get; set; }

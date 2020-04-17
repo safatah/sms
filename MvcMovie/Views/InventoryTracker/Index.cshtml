@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HappyHelper.Models.Movie>
+﻿@model IEnumerable<HappyHelper.Models.InventoryTracker>
 
 @{
     ViewData["Title"] = "Index";
@@ -34,10 +34,10 @@
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ReleaseDate)
+                @Html.DisplayFor(modelItem => item.RestockDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Genre)
+                @Html.DisplayFor(modelItem => item.InStock)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
