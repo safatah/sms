@@ -12,13 +12,13 @@ namespace HappyHelper.Models
     {
         public int Id { get; set; }
 
-        [StringLength(50)]
-        [Required]
+        [StringLength(50, MinimumLength = 1)]
+        [Required(ErrorMessage = "Please enter a valid business/shop name")]
         public string BusinessName { get; set; }
 
         [DataType(DataType.PhoneNumber)]
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Please enter a valid phone number")]
-        [Required]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$")]
+        [Required(ErrorMessage = "Please enter a valid phone number")]
         public string BusinessNumber { get; set; }
 
         [RegularExpression(@"^[a - zA - Z0 - 9\s.\-] +$", ErrorMessage = "Please enter a valid address")]
@@ -26,8 +26,8 @@ namespace HappyHelper.Models
         public string Address1 { get; set; }
         public string Address2 { get; set; }
 
-        [StringLength(50)]
-        [Required]
+        [StringLength(50, MinimumLength = 2)]
+        [Required(ErrorMessage = "Please enter a valid city name")]
         public string City { get; set; }
 
 

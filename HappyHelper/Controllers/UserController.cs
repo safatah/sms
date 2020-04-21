@@ -28,7 +28,7 @@ namespace HappyHelper.Controllers
         // POST: Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Nickname,ContactNumber,ContactEmail,SocialMedia,BusinessInfo,Username,Password")] SignUp item)
+        public async Task<IActionResult> SignUp([Bind("Id,FirstName,LastName,Nickname,ContactNumber,ContactEmail,SocialMedia,BusinessInfo,Username,Password")] SignUp item)
         {
             if (ModelState.IsValid)
             {
@@ -36,7 +36,7 @@ namespace HappyHelper.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return RedirectToAction(nameof(SignUp));
+            return View(item);
         }
         // POST: Edit
         [HttpPost]

@@ -12,12 +12,12 @@ namespace HappyHelper.Models
     {
         public int Id { get; set; }
 
-        [StringLength(50)]
-        [Required]
+        [StringLength(50, MinimumLength = 2)]
+        [Required(ErrorMessage = "Please enter your first name")]
         public string FirstName { get; set; }
 
-        [StringLength(50)]
-        [Required]
+        [StringLength(50, MinimumLength = 2)]
+        [Required(ErrorMessage = "Please enter your last name")]
         public string LastName { get; set; }
 
         [StringLength(50)]
@@ -31,7 +31,9 @@ namespace HappyHelper.Models
         [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "Please enter a valid email address")]
         public string ContactEmail { get; set; }
 
-
+        [StringLength(100)]
+        [DataType(DataType.Url)]
+        [RegularExpression(@"((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)", ErrorMessage = "Please enter a valid website URL")]
         public string SocialMedia { get; set; }
 
 

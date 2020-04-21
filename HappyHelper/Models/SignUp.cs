@@ -11,13 +11,14 @@ namespace HappyHelper.Models
 {
     public class SignUp : UserInfo
     {
-        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "Please enter a valid email address")]
-        [Required]
+        [DataType(DataType.EmailAddress)]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$")]
+        [Required(ErrorMessage = "Please enter a valid email address")]
         public string ProfileEmail { get; set; }
 
-        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8}$", ErrorMessage = "Please enter a valid password")]
+        [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8}$")]
         [StringLength(20, MinimumLength = 8)]
-        [Required]
+        [Required(ErrorMessage = "Please enter a valid password. Password must be between 8-20 characters")]
         public string Password { get; set; }
     }
 
