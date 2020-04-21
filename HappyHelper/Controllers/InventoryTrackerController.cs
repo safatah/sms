@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HappyHelper.Data;
 using HappyHelper.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HappyHelper.Controllers
 {
+    [Authorize]
     public class InventoryTrackerController : Controller
     {
         private readonly HappyHelperContext _context;

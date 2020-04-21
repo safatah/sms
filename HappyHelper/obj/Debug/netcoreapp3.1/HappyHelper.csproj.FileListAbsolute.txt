@@ -1,3 +1,9 @@
+C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.csproj.CoreCompileInputs.cache
+C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.MvcApplicationPartsAssemblyInfo.cache
+C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.RazorAssemblyInfo.cache
+C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.RazorAssemblyInfo.cs
+C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.AssemblyInfoInputs.cache
+C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.AssemblyInfo.cs
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\bin\Debug\netcoreapp3.1\appsettings.json
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -134,12 +140,6 @@ C:\CODING\LIFTOFF\SMS\sms\HappyHelper\bin\Debug\netcoreapp3.1\runtimes\unix\lib\
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.csprojAssemblyReference.cache
-C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.csproj.CoreCompileInputs.cache
-C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.MvcApplicationPartsAssemblyInfo.cache
-C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.RazorAssemblyInfo.cache
-C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.RazorAssemblyInfo.cs
-C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.AssemblyInfoInputs.cache
-C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.AssemblyInfo.cs
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.TagHelpers.input.cache
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.TagHelpers.output.cache
 C:\CODING\LIFTOFF\SMS\sms\HappyHelper\obj\Debug\netcoreapp3.1\HappyHelper.RazorCoreGenerate.cache
