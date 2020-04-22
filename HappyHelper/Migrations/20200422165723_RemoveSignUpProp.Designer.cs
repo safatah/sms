@@ -4,14 +4,16 @@ using HappyHelper.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace HappyHelper.Migrations
 {
     [DbContext(typeof(HappyHelperContext))]
-    partial class HappyHelperContextModelSnapshot : ModelSnapshot
+    [Migration("20200422165723_RemoveSignUpProp")]
+    partial class RemoveSignUpProp
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

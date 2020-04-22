@@ -20,6 +20,7 @@ namespace HappyHelper.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
+        //dependency injection
         private readonly SignInManager<SignUp> _signInManager;
         private readonly UserManager<SignUp> _userManager;
         private readonly ILogger<RegisterModel> _logger;

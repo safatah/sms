@@ -11,8 +11,6 @@ namespace HappyHelper.Models
 {
     public class UserInfo : IdentityUser
     {
-        //public int Id { get; set; }
-
         [StringLength(50, MinimumLength = 2)]
         [Required(ErrorMessage = "Please enter your first name")]
         public string FirstName { get; set; }
@@ -25,7 +23,7 @@ namespace HappyHelper.Models
         public string Nickname { get; set; }
 
         [DataType(DataType.PhoneNumber)]
-        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Please enter a valid phone number")]
+        [RegularExpression(@"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$", ErrorMessage = "Please enter a valid phone number")]        
         public string ContactNumber { get; set; }
 
         [DataType(DataType.EmailAddress)]
