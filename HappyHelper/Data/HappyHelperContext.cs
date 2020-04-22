@@ -1,18 +1,23 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using HappyHelper.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace HappyHelper.Data
 {
-    public class HappyHelperContext : DbContext
+    public class HappyHelperContext : IdentityDbContext<SignUp>
     {
         public HappyHelperContext(DbContextOptions<HappyHelperContext> options)
             : base(options)
         {
         }
 
-        public DbSet<SignUp> SignUp { get; set; }
-        public DbSet<UserInfo> UserInfo { get; set; }
-        public DbSet<BusinessInfo> BusinessInfo { get; set; }
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+
+        //public DbSet<BusinessInfo> BusinessInfo { get; set; }
+        //public DbSet<UserInfo> SignUp { get; set; }
         public DbSet<InventoryTracker> InventoryTracker { get; set; }
     }
 }

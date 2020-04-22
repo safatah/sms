@@ -10,6 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using HappyHelper.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+using HappyHelper.Models;
 
 namespace HappyHelper
 {
@@ -29,6 +31,10 @@ namespace HappyHelper
 
             services.AddDbContext<HappyHelperContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("HappyHelperContext")));
+            services.AddDefaultIdentity<SignUp>(options => options.SignIn.RequireConfirmedAccount = true)
+            .AddEntityFrameworkStores<HappyHelperContext>();
+            services.AddControllersWithViews();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,6 +43,7 @@ namespace HappyHelper
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                //app.UseDatabaseErrorPage();
             }
             else
             {
@@ -49,6 +56,7 @@ namespace HappyHelper
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -56,6 +64,7 @@ namespace HappyHelper
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

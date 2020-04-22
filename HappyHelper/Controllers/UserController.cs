@@ -43,7 +43,7 @@ namespace HappyHelper.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,RestockDate,InStock,Price")] UserInfo item)
         {
-            if (id != item.Id)
+            if (id != Int32.Parse(item.Id))
             {
                 return NotFound();
             }
@@ -57,7 +57,7 @@ namespace HappyHelper.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!UserExists(item.Id))
+                    if (!UserExists(Int32.Parse(item.Id)))
                     {
                         return NotFound();
                     }
@@ -75,14 +75,14 @@ namespace HappyHelper.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var item = await _context.UserInfo.FindAsync(id);
-            _context.UserInfo.Remove(item);
+            var item = await _context.Users.FindAsync(id);
+            _context.Users.Remove(item);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
         private bool UserExists(int id)
         {
-            return _context.UserInfo.Any(e => e.Id == id);
+            return _context.Users.Any(e => Int32.Parse(e.Id) == id);
         }
     }
 }

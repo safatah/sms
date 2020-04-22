@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Identity;
 
 namespace HappyHelper.Models
 {
-    public class UserInfo
+    public class UserInfo : IdentityUser
     {
-        public int Id { get; set; }
+        //public int Id { get; set; }
 
         [StringLength(50, MinimumLength = 2)]
         [Required(ErrorMessage = "Please enter your first name")]
