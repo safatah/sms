@@ -96,15 +96,11 @@ namespace HappyHelper.Migrations
                     LockoutEnd = table.Column<DateTimeOffset>(nullable: true),
                     LockoutEnabled = table.Column<bool>(nullable: false),
                     AccessFailedCount = table.Column<int>(nullable: false),
-                    FirstName = table.Column<string>(maxLength: 50, nullable: false),
-                    LastName = table.Column<string>(maxLength: 50, nullable: false),
+                    FirstName = table.Column<string>(maxLength: 50, nullable: true),
+                    LastName = table.Column<string>(maxLength: 50, nullable: true),
                     Nickname = table.Column<string>(maxLength: 50, nullable: true),
-                    ContactNumber = table.Column<string>(nullable: true),
-                    ContactEmail = table.Column<string>(nullable: true),
                     SocialMedia = table.Column<string>(maxLength: 100, nullable: true),
-                    BusinessInfoId = table.Column<int>(nullable: true),
-                    ProfileEmail = table.Column<string>(nullable: false),
-                    Password = table.Column<string>(maxLength: 20, nullable: false)
+                    BusinessInfoId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {

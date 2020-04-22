@@ -1,1 +1,1 @@
-﻿SELECT * FROM Movie6
+﻿SELECT * FROM aspnetusers

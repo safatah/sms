@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HappyHelper.Migrations
 {
     [DbContext(typeof(HappyHelperContext))]
-    [Migration("20200422165723_RemoveSignUpProp")]
-    partial class RemoveSignUpProp
+    [Migration("20200422182118_RemakeDB")]
+    partial class RemakeDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -103,12 +103,6 @@ namespace HappyHelper.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ContactEmail")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ContactNumber")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
@@ -117,12 +111,10 @@ namespace HappyHelper.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 

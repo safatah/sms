@@ -33,9 +33,29 @@ namespace HappyHelper.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
+            [EmailAddress]
+            [Display(Name = "Email")]
+            public string Email { get; set; }
+
+            [StringLength(50, MinimumLength = 2)]
+            [Required(ErrorMessage = "Please enter your first name")]
+            public string FirstName { get; set; }
+
+            [StringLength(50, MinimumLength = 2)]
+            [Required(ErrorMessage = "Please enter your last name")]
+            public string LastName { get; set; }
+
+            [StringLength(50)]
+            public string Nickname { get; set; }
+
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+
+            [StringLength(100)]
+            [DataType(DataType.Url)]
+            //[RegularExpression(@"((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)")]
+            public string SocialMedia { get; set; }
         }
 
         private async Task LoadAsync(SignUp user)
@@ -47,7 +67,12 @@ namespace HappyHelper.Areas.Identity.Pages.Account.Manage
 
             Input = new InputModel
             {                
-                PhoneNumber = phoneNumber
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Nickname = user.Nickname,
+                PhoneNumber = phoneNumber,
+                SocialMedia = user.SocialMedia
             };
         }
 
@@ -87,6 +112,15 @@ namespace HappyHelper.Areas.Identity.Pages.Account.Manage
                     throw new InvalidOperationException($"Unexpected error occurred setting phone number for user with ID '{userId}'.");
                 }
             }
+
+            user.Email = Input.Email;
+            user.FirstName = Input.FirstName;
+            user.LastName = Input.LastName;
+            user.Nickname = Input.Nickname;
+            user.PhoneNumber = Input.PhoneNumber;
+            user.SocialMedia = Input.SocialMedia;
+
+            await _userManager.UpdateAsync(user);
 
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";
