@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using HappyHelper.Data;
 using HappyHelper.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace HappyHelper.Controllers
 {
@@ -15,16 +16,19 @@ namespace HappyHelper.Controllers
     public class InventoryTrackerController : Controller
     {
         private readonly HappyHelperContext _context;
+        private readonly UserManager<SignUp> _userManager;
 
-        public InventoryTrackerController(HappyHelperContext context)
+        public InventoryTrackerController(HappyHelperContext context, UserManager<SignUp> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Items
         public async Task<IActionResult> Index()
         {
-            return View(await _context.InventoryTracker.ToListAsync());
+            var userId = _userManager.GetUserId(User);
+            return View(await _context.InventoryTracker.Where(i => i.UserId == userId).ToListAsync());
         }
 
         // GET: Details
@@ -54,10 +58,11 @@ namespace HappyHelper.Controllers
         // POST: Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,RestockDate,InStock,Price")] InventoryTracker item)
+        public async Task<IActionResult> Create([Bind("Id,Title,RestockDate,InStock,Price,UserId")] InventoryTracker item)
         {
             if (ModelState.IsValid)
             {
+                item.UserId = _userManager.GetUserId(User);
                 _context.Add(item);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -84,7 +89,7 @@ namespace HappyHelper.Controllers
         // POST: Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,RestockDate,InStock,Price")] InventoryTracker item)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,RestockDate,InStock,Price,UserId")] InventoryTracker item)
         {
             if (id != item.Id)
             {
@@ -95,6 +100,7 @@ namespace HappyHelper.Controllers
             {
                 try
                 {
+                    item.UserId = _userManager.GetUserId(User);
                     _context.Update(item);
                     await _context.SaveChangesAsync();
                 }

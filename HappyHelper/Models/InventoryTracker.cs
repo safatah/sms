@@ -35,5 +35,8 @@ namespace HappyHelper.Models
         [Column(TypeName = "decimal(18, 2)")]
         [Required(ErrorMessage = "Please enter valid product price")]
         public decimal Price { get; set; }
+
+
+        public string UserId { get; set; }
     }
 }

@@ -14,6 +14,10 @@ namespace HappyHelper.Data
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.Entity<InventoryTracker>()
+                .HasOne<SignUp>()
+                .WithMany()
+                .HasForeignKey(i => i.UserId);
         }
 
         //public DbSet<BusinessInfo> BusinessInfo { get; set; }
