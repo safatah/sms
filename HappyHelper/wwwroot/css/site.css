@@ -12,6 +12,15 @@ a {
   color: #0366d6;
 }
 
+.div {
+    box-shadow: 10px 10px 5px grey;
+}
+
+.h1 {
+    color: aliceblue;
+    text-shadow: 2px 2px 4px #e7f3ff;
+}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
